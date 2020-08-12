@@ -275,7 +275,7 @@ MonoBehaviour:
   anchor: {fileID: 1835362101}
   handle: {fileID: 347006024}
   hardness: 0
-  radius: 0
+  radius: 2
 --- !u!4 &1835362101
 Transform:
   m_ObjectHideFlags: 0

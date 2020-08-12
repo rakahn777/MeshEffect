@@ -34,4 +34,19 @@ public class Manipulator : MonoBehaviour
     {
         Shader.SetGlobalMatrix("_TransformationMatrix", Matrix4x4.identity);
     }
+
+    [ContextMenu("Debug Matrix")]
+    public void DebugMatrix()
+    {
+        Matrix4x4 handleMatrix = handle.localToWorldMatrix;
+        Matrix4x4 anchorMatrix = anchor.worldToLocalMatrix;
+        Matrix4x4 transformationMatrix = handleMatrix * anchorMatrix;
+        
+        Debug.Log("handle: localToWorldMatrix");
+        Debug.Log(handleMatrix);
+        Debug.Log("anchor: worldToLocalMatrix");
+        Debug.Log(anchorMatrix);
+        Debug.Log("transformationMatrix");
+        Debug.Log(transformationMatrix);
+    }
 }
